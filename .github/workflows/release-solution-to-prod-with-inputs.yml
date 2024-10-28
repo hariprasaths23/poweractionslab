@@ -91,7 +91,7 @@ jobs:
         solution-output-file: ${{ inputs.solution_shipping_folder}}/${{ inputs.solution_name }}_managed.zip
 
     - name: Upload the ready to ship solution to GH artifact store
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: managedSolutions
         path: ${{ inputs.solution_shipping_folder}}/
@@ -103,12 +103,12 @@ jobs:
       RUNNER_DEBUG: 1
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         lfs: true
 
     - name: Fetch the ready to ship solution from GH artifact store
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: managedSolutions
         path: ${{ inputs.solution_release_folder}}
