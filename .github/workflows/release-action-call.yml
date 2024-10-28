@@ -19,4 +19,4 @@ jobs:
       CLIENT_ID: '4282b5cc-4daf-4243-ba71-2cd36ff3c659'
       TENANT_ID: '19b40fc0-3b33-4ee0-be00-05adc41751b8'      
     secrets:
-      envSecret: ${{ secrets.PowerPlatformSPN }}
+      envSecret: ${{ secrets.POWERPLATFORMSPN }}
